@@ -54,10 +54,3 @@
 //= require dataTables/jquery.dataTables
 //= require turbolinks
 //= require_tree .
-
-jQuery ->
-  $('.datepicker').datepicker()
-jQuery ->
-        $('#products').dataTable()
-          sPaginationType: "full_numbers"
-          bJQueryUI: true
