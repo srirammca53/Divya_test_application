@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @patient.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @patient.last_name %>
+</p>
+
+<p>
+  <strong>Middle name:</strong>
+  <%= @patient.middle_name %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @patient.date_of_birth %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @patient.age %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @patient.address %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @patient.phone_number %>
+</p>
+
+<p>
+  <strong>Care specialization:</strong>
+  <%= @patient.care_Specialization %>
+</p>
+<% @patient_attachments.each do |p| %>
+  <%= image_tag p.avatar_url %>
+  <%= link_to "Edit Attachment", edit_patient_attachment_path(p) %>
+<% end %>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

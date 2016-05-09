@@ -1,0 +1,69 @@
+<center>
+<div id="patient_form">
+<%= form_for(@patient,:html => { :multipart => true }) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <table id="products">
+    <tr>
+      <td>
+        <%= f.label :first_name %>
+      </td>
+      <td>
+        <%= f.text_field :first_name %>
+      </td>
+    </tr>
+    <tr>
+      <td><%= f.label :last_name %></td>
+      <td><%= f.text_field :last_name %></td>
+    </tr>
+      <td><%= f.label :middle_name %></td>
+      <td><%= f.text_field :middle_name %></td>
+    </tr>
+    <tr>
+      <td><p>Date:</p></td>
+      <td> <%= f.date_select :date_of_birth,  :order => [:day, :month, :year] , :start_year=>1930,:end_year=>Date.today.year%></td>
+    <tr>
+      <td><%= f.label :gender %></td>
+      <td><%= f.radio_button :gender , 'Male', :checked => true  %>
+    <%= f.label :gender, 'Male' %>
+    <%= f.radio_button :gender , 'Female', :checked => true  %>
+    <%= f.label :gender, 'Female' %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :age %></td>
+    <td><%= f.number_field :age %></td>
+  </tr>
+  <tr class="field">
+    <td><%= f.label :address %></td>
+    <td><%= f.text_area :address %></td>
+  </tr>
+  <tr class="field">
+    <td><%= f.label :phone_number %></td>
+    <td><%= f.text_field :phone_number %></td>
+  </tr>
+  <tr class="field">
+    <td><%= f.label :care_Specialization %></td>
+    <td><%= f.select :care_Specialization, options_for_select(['Diabetics', 'Cardiac', 'General physician', 'Gynaecology']),{  :selected => params[:care_Specialization] } %></td>
+  </tr>
+
+     <tr >
+       <td><%= f.label :avatar %></td>
+       <td><%= f.file_field :avatar, :multiple => true, name: "patient_attachments[avatar][]" %></td>
+     </tr>
+
+  </table>
+  <div class="actions">
+    <%= f.submit :class=>"button_create" %>
+  </div>
+<% end %>
+</div>
+</center>

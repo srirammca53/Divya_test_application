@@ -1,0 +1,24 @@
+<%= form_for(@patient_attachment) do |f| %>
+  <% if @patient_attachment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient_attachment.errors.count, "error") %> prohibited this patient_attachment from being saved:</h2>
+
+      <ul>
+      <% @patient_attachment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= image_tag @patient_attachment.avatar %>
+<%= form_for(@patient_attachment) do |f| %>
+  <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @patient_attachment.patient_id %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @patient_attachment.avatar %>
+</p>
+
+<%= link_to 'Edit', edit_patient_attachment_path(@patient_attachment) %> |
+<%= link_to 'Back', patient_attachments_path %>

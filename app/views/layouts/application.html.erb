@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PatientRegistration</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <%= csrf_meta_tags %>
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
+</head>
+<body>
+<div id="header">
+<center>
+<br>
+<h1> iMinify – Use Case </h1>
+<br/>
+</center>
+</div>
+<hr/>
+<div id="content">
+<%= yield %>
+</div>
+<div id="header">
+<hr/>
+<br/>
+<center>  &#169; 2016-17 by <i>Kuchimanchi Divya</i> </center>
+</div>
+</body>
+</html>

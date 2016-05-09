@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require jquery-ui
+ *= require jquery-ui/datepicker
+ *= require bootstrap-datepicker
+ *= require jquery-ui/core
+ *= require jquery-ui/theme
+ *= require jquery-ui/draggable
+ *= require jquery-ui/resizable
+ *= require jquery-ui/selectable
+ *= require jquery-ui/sortable
+ *= require jquery-ui/accordion
+ *= require jquery-ui/autocomplete
+ *= require dataTables/jquery.dataTables
+ *= require jquery-ui/button
+ *= require jquery-ui/datepicker
+ *= require jquery-ui/dialog
+ *= require jquery-ui/menu
+ *= require jquery-ui/progressbar
+ *= require jquery-ui/selectmenu
+ *= require jquery-ui/slider
+ *= require jquery-ui/spinner
+ *= require jquery-ui/tabs
+ *= require jquery-ui/tooltip
+ *= require dataTables/src/demo_table_jui
+ */
+#t01 {
+    width: 100%;    
+    background-color: #f1f1c1;
+}
+.row:hover {
+  background-color: #ffff99;
+}
+#header{
+  background-color: #D7D7D7;
+  width:100%;
+  height:15%;
+}
+#patient_form{
+	width:600px;
+	height:auto;
+	border:1;
+	border-color:#d7d7d7;
+	background-color:#f4f4f4;
+	border-radius:15px;
+}
+#field:hover {
+  background-color: #e7e7e7;;
+}
+.button_create {background-color: #e7e7e7; color: black; height:40px; width:150px;} /* Gray */ 
+#content{
+	min-height:500px;
+}
